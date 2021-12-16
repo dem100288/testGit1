@@ -16,6 +16,6 @@ if __name__ == '__main__':
             if event.type == pygame.MOUSEBUTTONDOWN:
                 game.get_click(event.pos)
 
-        screen.fill((0, 0, 0))
+
         game.render(screen)
         pygame.display.flip()
