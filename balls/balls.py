@@ -41,20 +41,18 @@ class Ball(pygame.sprite.Sprite):
 
 
 class Border(pygame.sprite.Sprite):
-    # СЃС‚СЂРѕРіРѕ РІРµСЂС‚РёРєР°Р»СЊРЅС‹Р№ РёР»Рё СЃС‚СЂРѕРіРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ РѕС‚СЂРµР·РѕРє
     def __init__(self, x1, y1, x2, y2):
         super().__init__(all_sprites)
-        if x1 == x2:  # РІРµСЂС‚РёРєР°Р»СЊРЅР°СЏ СЃС‚РµРЅРєР°
+        if x1 == x2:
             self.add(vertical_borders)
             self.image = pygame.Surface([1, y2 - y1])
             self.rect = pygame.Rect(x1, y1, 1, y2 - y1)
-        else:  # РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ СЃС‚РµРЅРєР°
+        else:
             self.add(horizontal_borders)
             self.image = pygame.Surface([x2 - x1, 1])
             self.rect = pygame.Rect(x1, y1, x2 - x1, 1)
 
 
-# РіСЂСѓРїРїР°, СЃРѕРґРµСЂР¶Р°С‰Р°СЏ РІСЃРµ СЃРїСЂР°Р№С‚С‹
 all_sprites = pygame.sprite.Group()
 
 horizontal_borders = pygame.sprite.Group()
